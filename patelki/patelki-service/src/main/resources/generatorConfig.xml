@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="testdb" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost:3306/db_patelki"
+            userId="root"
+            password="root">
+        </jdbcConnection>
+         
+        <javaModelGenerator targetPackage="com.patelki.domain" targetProject="patelki-service">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+  
+        <sqlMapGenerator targetPackage="com.patelki.map"  targetProject="patelki-service">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+  
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.patelki.map"  targetProject="patelki-service">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+         
+         
+        <!-- <table tableName="tn_m_address_type"></table>
+        <table tableName="tn_m_card"></table>
+        <table tableName="tn_m_city"></table>
+        <table tableName="tn_m_province"></table>
+        <table tableName="tn_m_education"></table>
+        <table tableName="tn_m_institution"></table>
+        <table tableName="tn_m_instituion_type"></table>
+        <table tableName="tn_m_level_management"></table>
+        <table tableName="tn_m_religion"></table>
+        <table tableName="tn_m_role"></table>
+        <table tableName="tn_m_working_status"></table>  -->
+        <table tableName="tn_p_user_login"></table>
+        
+        
+  </context>
+
+</generatorConfiguration>
