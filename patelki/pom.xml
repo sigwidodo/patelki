@@ -23,5 +23,7 @@
   	<module>patelki-api</module>
   	<module>patelki-app</module>
   	<module>patelki-service</module>
+  	<module>com.patelki.mapper</module>
+  	<module>patelki-mapper</module>
   </modules>
 </project>
